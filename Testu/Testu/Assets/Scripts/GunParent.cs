@@ -24,9 +24,10 @@ public class GunParent : MonoBehaviour
         {
             if (time > cadency) 
             {
-                Instantiate(projectile,parent.position, Quaternion.identity);
-                BulletMovement bm = projectile.GetComponent<BulletMovement>();
-                bm.maxDistance
+                GameObject bullet = Instantiate(projectile,parent.position, Quaternion.identity);
+                bullet.GetComponent<BulletMovement>().maxDistance = distanceBullet;
+                
+
 
                 //Reset time to shoot
                 time = 0.0f;
