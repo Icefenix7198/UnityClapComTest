@@ -8,6 +8,7 @@ public class GunParent : MonoBehaviour
     public float damage;
     public float cadency;
     public float distanceBullet;
+    public float speedBullet;
     public GameObject projectile;
     public Transform parent;
     float time = 0.0f;
@@ -24,10 +25,12 @@ public class GunParent : MonoBehaviour
         {
             if (time > cadency) 
             {
+                //Create bullet and set its characteristics
                 GameObject bullet = Instantiate(projectile,parent.position, Quaternion.identity);
                 bullet.GetComponent<BulletMovement>().maxDistance = distanceBullet;
-                
+                bullet.GetComponent<BulletMovement>().speed = speedBullet;
 
+                //More things would go here
 
                 //Reset time to shoot
                 time = 0.0f;
