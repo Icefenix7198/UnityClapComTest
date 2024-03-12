@@ -12,10 +12,6 @@ public class GunParent : MonoBehaviour
     public GameObject projectile;
     public Transform parent;
     float time = 0.0f;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,7 +31,6 @@ public class GunParent : MonoBehaviour
                 //Reset time to shoot
                 time = 0.0f;
             }
-            
         }
     }
 }
