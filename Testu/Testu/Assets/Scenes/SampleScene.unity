@@ -434,8 +434,8 @@ MonoBehaviour:
   cadency: 0.5
   distanceBullet: 10.51
   speedBullet: 8
-  projectile: {fileID: 1354342707260116005, guid: eacaeefab8326ee45bd9219487ddf1dd, type: 3}
-  parent: {fileID: 818707862}
+  projectile: {fileID: 5133415766680286935, guid: c8e7d6f348619734b9ac074049df36b5, type: 3}
+  parent: {fileID: 0}
 --- !u!114 &818707864
 MonoBehaviour:
   m_ObjectHideFlags: 0
