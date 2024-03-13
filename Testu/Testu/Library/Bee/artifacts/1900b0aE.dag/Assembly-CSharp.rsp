@@ -355,6 +355,7 @@
 "Assets/Scripts/BulletMovement.cs"
 "Assets/Scripts/CameraMovement1.cs"
 "Assets/Scripts/DamageDetector.cs"
+"Assets/Scripts/EnemiesDetection.cs"
 "Assets/Scripts/GunController.cs"
 "Assets/Scripts/GunParent.cs"
 "Assets/Scripts/MovementPlayer.cs"

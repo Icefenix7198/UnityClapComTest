@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 553441733}
   - component: {fileID: 553441732}
   - component: {fileID: 553441731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodyEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 818707862}
   - component: {fileID: 818707864}
   - component: {fileID: 818707863}
+  - component: {fileID: 818707865}
   m_Layer: 0
   m_Name: Characther
   m_TagString: Untagged
@@ -663,6 +664,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
+--- !u!114 &818707865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818707861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb527af9d3e1b7643969fc56a7b2d29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 72
+  areaDetection: {x: 100, y: 20, z: 100}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
