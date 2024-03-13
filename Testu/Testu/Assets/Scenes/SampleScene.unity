@@ -476,9 +476,9 @@ GameObject:
   - component: {fileID: 727089940}
   - component: {fileID: 727089939}
   - component: {fileID: 727089942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodyChar
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,6 +680,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 72
   areaDetection: {x: 100, y: 20, z: 100}
+  listEnemies: []
+  timeToUpdate: 0.2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

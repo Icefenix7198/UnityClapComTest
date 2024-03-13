@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemiesDetection : MonoBehaviour
@@ -7,6 +8,11 @@ public class EnemiesDetection : MonoBehaviour
     bool m_Started;
     public LayerMask m_LayerMask;
     public Vector3 areaDetection;
+    public List<GameObject> listEnemies;
+
+    //Tiempo de checkear enemigos
+    float time;
+    public float timeToUpdate;
 
     void Start()
     {
@@ -14,9 +20,15 @@ public class EnemiesDetection : MonoBehaviour
         m_Started = true;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        MyCollisions();
+        time += Time.deltaTime;
+        if (time > timeToUpdate) 
+        {
+            MyCollisions();
+            time = 0.0f;
+        }
+        
     }
 
     void MyCollisions()
@@ -30,8 +42,22 @@ public class EnemiesDetection : MonoBehaviour
         {
             //Output all of the collider names
             Debug.Log("Hit : " + hitColliders[i].name + i);
+            
+            //Comprovacion de que es un enemigo
+            if (hitColliders[i].GameObject().tag == "Enemy") 
+            {
+                //Añadirlo si no esta en la lista (quiza habria que hacer un ray cast de asegurar que no es a traves de una pared?)
+                bool AddToList = true;
+                for(int j = 0; j < listEnemies.Count; j++) 
+                {
+                    if (hitColliders[i].gameObject == listEnemies[j]) { AddToList = false; }
+                }
+                if (AddToList) { listEnemies.Add(hitColliders[i].gameObject); }
+            }
+
             //Increase the number of Colliders in the array
             i++;
+
             
         }
     }
