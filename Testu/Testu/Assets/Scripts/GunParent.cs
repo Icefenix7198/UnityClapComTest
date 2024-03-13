@@ -14,23 +14,21 @@ public class GunParent : MonoBehaviour
 
     //Tenemos un tiempo solo para la espera entre disparos y un tiempo para la actualizacion de las balas (?)
     float shootingTime = 0.0f;
-    float time = 0.0f;
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        shootingTime += time;
-        if(shootingTime > 0.1f) { }
+        shootingTime += Time.deltaTime;
         if (Input.GetKey(KeyCode.J)) 
         {
             if (shootingTime > cadency) 
             {
                 //Create bullet and set its characteristics
-                //projectile.GetComponent<BulletMovement>().maxDistance = distanceBullet;
-                //projectile.GetComponent<BulletMovement>().speed = speedBullet;
-                Instantiate(projectile,parent.position, Quaternion.identity);
-
+                
+                GameObject referencia = Instantiate(projectile,parent.position, Quaternion.identity);
+                referencia.GetComponent<BulletMovement>().maxDistance = distanceBullet;
+                referencia.GetComponent<BulletMovement>().speed = speedBullet;
+                referencia.GetComponent<BulletMovement>().damage = damage;
 
                 //More things would go here
 

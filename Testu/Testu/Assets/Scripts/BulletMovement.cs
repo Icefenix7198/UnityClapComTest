@@ -7,10 +7,12 @@ public class BulletMovement : MonoBehaviour
     // Start is called before the first frame update
     public float maxDistance;
     public float speed;
+    public float damage;
     float time;
+    [SerializeField] private Vector3 firstPosition;
     void Start()
     {
-        
+        firstPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -20,10 +22,14 @@ public class BulletMovement : MonoBehaviour
         //if (Collision.)
 
         time += Time.deltaTime;
+        //Mover bala
+        Vector3 newPos = Vector3.zero;
+        newPos.z = time * speed;
+        transform.position = firstPosition + newPos;
 
         if(time > (maxDistance/speed)) 
         { 
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
