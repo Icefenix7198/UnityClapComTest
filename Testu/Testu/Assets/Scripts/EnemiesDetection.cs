@@ -41,7 +41,7 @@ public class EnemiesDetection : MonoBehaviour
         while (i < hitColliders.Length)
         {
             //Output all of the collider names
-            Debug.Log("Hit : " + hitColliders[i].name + i);
+            //Debug.Log("Hit : " + hitColliders[i].name + i);
             
             //Comprovacion de que es un enemigo
             if (hitColliders[i].GameObject().tag == "Enemy") 

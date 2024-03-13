@@ -26,8 +26,9 @@ public class DamageDetector : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Hubo impacto con:", collision.gameObject);
         //If collides with player bullet
-        if (collision.gameObject.CompareTag("bullet")) 
+        if (collision.gameObject.CompareTag("Bullet")) 
         {
             //Deal damage
             float dmg = collision.gameObject.GetComponent<BulletMovement>().damage;
