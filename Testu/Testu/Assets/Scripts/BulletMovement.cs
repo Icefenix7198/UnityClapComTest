@@ -9,22 +9,23 @@ public class BulletMovement : MonoBehaviour
     public float speed;
     public float damage;
     float time;
+    public bool piercing;
+    public Vector3 direction;
     [SerializeField] private Vector3 firstPosition;
     void Start()
     {
+        Debug.Log(transform.rotation);
         firstPosition = transform.position;
+        transform.forward = direction;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //If collide with enemy and not piercing destroy bullet
-        //if (Collision.)
-
         time += Time.deltaTime;
         //Mover bala
         Vector3 newPos = Vector3.zero;
-        newPos.z = time * speed;
+        newPos = time * speed * transform.forward;
         transform.position = firstPosition + newPos;
 
         if(time > (maxDistance/speed)) 

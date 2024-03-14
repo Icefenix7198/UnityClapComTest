@@ -26,7 +26,7 @@ public class DamageDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hubo impacto con:", other.gameObject);
+        //Debug.Log("Hubo impacto con:", other.gameObject);
         //If collides with player bullet
         if (other.gameObject.CompareTag("Bullet"))
         {
@@ -35,6 +35,10 @@ public class DamageDetector : MonoBehaviour
             HP -= dmg;
 
             //If not piercing destoy bullet
+            if (!other.gameObject.GetComponent<BulletMovement>().piercing) 
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 }

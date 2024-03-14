@@ -40,20 +40,22 @@ public class GunParent : MonoBehaviour
             }
 
             //Set rotacion del disparo
+            Vector3 shotDir = transform.forward;
             if(enemigos != null) 
             {
                 //Direccion del enemigo
-                //Vector3 dir = enemyToShoot.transform.position - parent.position;
-                transform.LookAt(enemyToShoot.transform);
+                shotDir = enemyToShoot.transform.position - parent.position;
+                //transform.LookAt(enemyToShoot.transform);
             }
 
             if (shootingTime > cadency) 
             {
                 //Create bullet and set its characteristics
-                GameObject referencia = Instantiate(projectile,parent.position, transform.rotation);
+                GameObject referencia = Instantiate(projectile,parent.position, Quaternion.identity);
                 referencia.GetComponent<BulletMovement>().maxDistance = distanceBullet;
                 referencia.GetComponent<BulletMovement>().speed = speedBullet;
                 referencia.GetComponent<BulletMovement>().damage = damage;
+                referencia.GetComponent<BulletMovement>().direction = shotDir;
 
                 //More things would go here
 
