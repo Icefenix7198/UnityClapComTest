@@ -24,14 +24,14 @@ public class DamageDetector : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hubo impacto con:", collision.gameObject);
+        Debug.Log("Hubo impacto con:", other.gameObject);
         //If collides with player bullet
-        if (collision.gameObject.CompareTag("Bullet")) 
+        if (other.gameObject.CompareTag("Bullet"))
         {
             //Deal damage
-            float dmg = collision.gameObject.GetComponent<BulletMovement>().damage;
+            float dmg = other.gameObject.GetComponent<BulletMovement>().damage;
             HP -= dmg;
 
             //If not piercing destoy bullet
