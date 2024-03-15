@@ -11,6 +11,7 @@ public class WeaponInfo : MonoBehaviour
     public bool piercing;
     public int maxMagazine;
     public float reloadTime;
+    public float damageScalation;
     enum shotType
     {
         NORMAL,

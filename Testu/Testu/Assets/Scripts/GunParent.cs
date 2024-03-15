@@ -17,6 +17,8 @@ public class GunParent : MonoBehaviour
     public int maxMagazine;
     public float reloadTime;
     int currentBullets;
+    public float damageScalation;
+    float actualDmgScalation;
     enum shotType
     {
         FUSIL, //Basic shoot
@@ -63,6 +65,7 @@ public class GunParent : MonoBehaviour
         shootingTime += Time.deltaTime;
         if (currentBullets <= 0)
         {
+            actualDmgScalation = 0.0f;
             if (shootingTime > reloadTime) { currentBullets = maxMagazine; }
         }
         else
@@ -102,6 +105,7 @@ public class GunParent : MonoBehaviour
                     shootingTime = 0.0f;
                 }
             }
+            else { actualDmgScalation = 0.0f; }
         }
 
     }

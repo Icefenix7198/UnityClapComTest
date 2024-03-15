@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5429c790ed5e8564981b8f5548683bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 16
-  cadency: 0.04
+  damage: 10
+  cadency: 0.02
   distanceBullet: 30
   speedBullet: 22
   piercing: 0

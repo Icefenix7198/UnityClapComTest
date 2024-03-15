@@ -51,5 +51,6 @@ MonoBehaviour:
   piercing: 0
   maxMagazine: 300
   reloadTime: 2
+  damageScalation: 0.025
   tipoDisparo: 0
   projectile: {fileID: 0}

@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce54655568d092428943f9b4754b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualWeapon: {fileID: 3100871468915037337, guid: 8d3f88a390ff5f349813d3603d224bf4, type: 3}
+  actualWeapon: {fileID: 3100871468915037337, guid: 77e1894cce46b1541a4646c5479cc97e, type: 3}
   damage: 1.6
   cadency: 0.5
   distanceBullet: 80
@@ -1025,6 +1025,7 @@ MonoBehaviour:
   piercing: 0
   maxMagazine: 120
   reloadTime: 2
+  damageScalation: 0
   tipoDisparo: 0
   projectile: {fileID: 840842374053577734, guid: acf34fb9470505b4a8405f76e7519056, type: 3}
   parent: {fileID: 727089937}
