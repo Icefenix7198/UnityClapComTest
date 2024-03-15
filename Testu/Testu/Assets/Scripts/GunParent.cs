@@ -5,13 +5,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class GunParent : MonoBehaviour
 {
-    using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-
-public class GunParent : MonoBehaviour
-{
     // Stats weapon
     public GameObject actualWeapon; //se le puede poner un prefab de arma en vez de assignar a mano los valores 
 
@@ -112,4 +105,4 @@ public class GunParent : MonoBehaviour
 
     }
 }
-}
+

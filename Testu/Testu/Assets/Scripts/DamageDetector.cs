@@ -9,14 +9,14 @@ public class DamageDetector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //If 0 life, die
-        if (HP <= 0) 
+        if (HP <= 0)
         {
             Destroy(this.gameObject);
 
@@ -35,7 +35,7 @@ public class DamageDetector : MonoBehaviour
             HP -= dmg;
 
             //If not piercing destoy bullet
-            if (!other.gameObject.GetComponent<BulletMovement>().piercing) 
+            if (!other.gameObject.GetComponent<BulletMovement>().piercing)
             {
                 Destroy(other.gameObject);
             }

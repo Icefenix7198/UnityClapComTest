@@ -23,12 +23,12 @@ public class EnemiesDetection : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > timeToUpdate) 
+        if (time > timeToUpdate)
         {
             MyCollisions();
             time = 0.0f;
         }
-        
+
     }
 
     void MyCollisions()
@@ -42,13 +42,13 @@ public class EnemiesDetection : MonoBehaviour
         {
             //Output all of the collider names
             //Debug.Log("Hit : " + hitColliders[i].name + i);
-            
+
             //Comprovacion de que es un enemigo
-            if (hitColliders[i].GameObject().tag == "Enemy") 
+            if (hitColliders[i].GameObject().tag == "Enemy")
             {
                 //Añadirlo si no esta en la lista (quiza habria que hacer un ray cast de asegurar que no es a traves de una pared?)
                 bool AddToList = true;
-                for(int j = 0; j < listEnemies.Count; j++) 
+                for (int j = 0; j < listEnemies.Count; j++)
                 {
                     if (hitColliders[i].gameObject == listEnemies[j]) { AddToList = false; }
                 }
@@ -58,7 +58,7 @@ public class EnemiesDetection : MonoBehaviour
             //Increase the number of Colliders in the array
             i++;
 
-            
+
         }
     }
 
