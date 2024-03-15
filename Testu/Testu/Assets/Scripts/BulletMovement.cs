@@ -12,10 +12,11 @@ public class BulletMovement : MonoBehaviour
     float time;
     public bool piercing;
     public Vector3 direction;
+    public bool EnemyBullet;
     [SerializeField] private Vector3 firstPosition;
     void Start()
     {
-        Debug.Log(transform.rotation);
+        //Debug.Log(transform.rotation);
         firstPosition = transform.position;
         transform.forward = direction;
     }
@@ -39,10 +40,9 @@ public class BulletMovement : MonoBehaviour
     {
         //Debug.Log("Hubo impacto con:", other.gameObject);
         //If collides with player bullet
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && !EnemyBullet)
         {
             //Deal damage
-            
             other.gameObject.GetComponent<DamageDetector>().HP -= damage;
 
             //If not piercing destoy bullet
@@ -51,5 +51,6 @@ public class BulletMovement : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+
     }
 }
