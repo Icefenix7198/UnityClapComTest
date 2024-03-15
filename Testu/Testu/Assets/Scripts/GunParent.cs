@@ -98,6 +98,7 @@ public class GunParent : MonoBehaviour
                     referencia.GetComponent<BulletMovement>().speed = speedBullet;
                     referencia.GetComponent<BulletMovement>().damage = damage;
                     referencia.GetComponent<BulletMovement>().direction = shotDir;
+                    referencia.GetComponent<BulletMovement>().piercing = piercing;
 
                     //Deploy bullets
                     currentBullets -= 1; //Lo pongo por si hay en un futuro gasto de multiples balas como en la escopeta, sino simplemente poner la otra formula que sera mas eficiente

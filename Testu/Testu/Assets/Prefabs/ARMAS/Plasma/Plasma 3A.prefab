@@ -53,4 +53,4 @@ MonoBehaviour:
   reloadTime: 2
   damageScalation: 0.025
   tipoDisparo: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 7966777421764177961, guid: 06cb4a18af861214ead2b86c13e319fa, type: 3}
