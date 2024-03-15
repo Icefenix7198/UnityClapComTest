@@ -39,7 +39,10 @@ public class BulletMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Hubo impacto con:", other.gameObject);
-        //If collides with player bullet
+        //Collision with wall
+        if (other.gameObject.CompareTag("Wall")) { Destroy(gameObject); }
+
+        //If collides with enemy
         if (other.gameObject.CompareTag("Enemy") && !EnemyBullet)
         {
             //Deal damage
@@ -51,16 +54,16 @@ public class BulletMovement : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else if (other.gameObject.CompareTag("Player") && EnemyBullet)
-            {
-                //Deal damage
-                other.gameObject.GetComponent<DamageDetector>().HP -= damage;
+        else if (other.gameObject.CompareTag("Player") && EnemyBullet) //Collision with player
+        {
+            //Deal damage
+            other.gameObject.GetComponent<DamageDetector>().HP -= damage;
 
-                //If not piercing destoy bullet
-                if (!piercing)
-                {
-                    Destroy(gameObject);
-                }
+            //If not piercing destoy bullet
+            if (!piercing)
+            {
+                Destroy(gameObject);
             }
+        }
     }
 }

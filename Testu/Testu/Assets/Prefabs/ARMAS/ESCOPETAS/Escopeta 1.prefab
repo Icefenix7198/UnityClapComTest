@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5429c790ed5e8564981b8f5548683bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  cadency: 0.02
-  distanceBullet: 60
-  speedBullet: 120
+  damage: 140
+  cadency: 1.2
+  distanceBullet: 0.4
+  speedBullet: 2
   piercing: 0
-  maxMagazine: 100
-  reloadTime: 0.75
+  maxMagazine: 13
+  reloadTime: 1.6
+  damageScalation: 0
   tipoDisparo: 0
-  projectile: {fileID: 7966777421764177961, guid: 06cb4a18af861214ead2b86c13e319fa, type: 3}
+  projectile: {fileID: 6177921692372879315, guid: 7cb61a4e317865f43a5568520fccf1d3, type: 3}
