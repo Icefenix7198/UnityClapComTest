@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -46,6 +47,8 @@ public class GunParent : MonoBehaviour
             piercing = actualWeapon.GetComponent<WeaponInfo>().piercing;
             maxMagazine = actualWeapon.GetComponent<WeaponInfo>().maxMagazine;
             reloadTime = actualWeapon.GetComponent<WeaponInfo>().reloadTime;
+
+            projectile = actualWeapon.GetComponent<WeaponInfo>().projectile;
 
         }
 

@@ -11,7 +11,6 @@ public class WeaponInfo : MonoBehaviour
     public bool piercing;
     public int maxMagazine;
     public float reloadTime;
-    int currentBullets;
     enum shotType
     {
         NORMAL,
@@ -19,4 +18,6 @@ public class WeaponInfo : MonoBehaviour
         SHOTGUN2,
     }
     [SerializeField] private shotType tipoDisparo;
+
+    public GameObject projectile;
 }

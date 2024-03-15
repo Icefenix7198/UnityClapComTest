@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
@@ -34,4 +35,21 @@ public class BulletMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log("Hubo impacto con:", other.gameObject);
+        //If collides with player bullet
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            //Deal damage
+            
+            other.gameObject.GetComponent<DamageDetector>().HP -= damage;
+
+            //If not piercing destoy bullet
+            if (!other.gameObject.GetComponent<BulletMovement>().piercing)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+    }
 }
