@@ -23,7 +23,8 @@ public class GunParent : MonoBehaviour
     {
         FUSIL, //Basic shoot
         FUSILUPGRADE, //Recharge on shoot
-        PLASMA, //Cada tick aumenta algo el daño
+        SHOTGUN, //Cada tick aumenta algo el daño
+
     }
     [SerializeField] private shotType tipoDisparo;
 

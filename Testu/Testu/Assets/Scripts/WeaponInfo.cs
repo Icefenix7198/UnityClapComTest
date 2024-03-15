@@ -14,9 +14,10 @@ public class WeaponInfo : MonoBehaviour
     public float damageScalation;
     enum shotType
     {
-        NORMAL,
-        SHOTGUN1,
-        SHOTGUN2,
+        FUSIL, //Basic shoot
+        FUSILUPGRADE, //Recharge on shoot
+        SHOTGUN, //Cada tick aumenta algo el daño
+
     }
     [SerializeField] private shotType tipoDisparo;
 
