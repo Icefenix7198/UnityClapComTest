@@ -19,9 +19,9 @@ public class GunParent : MonoBehaviour
     int currentBullets;
     enum shotType
     {
-        NORMAL,
-        SHOTGUN1,
-        SHOTGUN2,
+        FUSIL, //Basic shoot
+        FUSILUPGRADE, //Recharge on shoot
+        PLASMA, //Cada tick aumenta algo el daño
     }
     [SerializeField] private shotType tipoDisparo;
 
@@ -54,7 +54,7 @@ public class GunParent : MonoBehaviour
 
         currentBullets = maxMagazine;
 
-        TargetEnemy();
+        //TargetEnemy();
     }
 
     // Update is called once per frame

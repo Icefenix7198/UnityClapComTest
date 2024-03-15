@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   cadency: 0.02
-  distanceBullet: 60
-  speedBullet: 120
+  distanceBullet: 90
+  speedBullet: 90
   piercing: 0
-  maxMagazine: 100
-  reloadTime: 0.75
+  maxMagazine: 200
+  reloadTime: 2
   tipoDisparo: 0
   projectile: {fileID: 7966777421764177961, guid: 06cb4a18af861214ead2b86c13e319fa, type: 3}
