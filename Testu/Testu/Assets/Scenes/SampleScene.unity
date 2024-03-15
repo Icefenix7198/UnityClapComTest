@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 231546858}
   m_Layer: 0
   m_Name: Pared
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 553441732}
   - component: {fileID: 553441731}
   m_Layer: 6
-  m_Name: BodyEnemy
+  m_Name: BodyEnemyI
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 754525497}
   - component: {fileID: 754525496}
   m_Layer: 6
-  m_Name: BodyEnemy
+  m_Name: BodyEnemyF
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 809189713}
   - component: {fileID: 809189712}
   m_Layer: 6
-  m_Name: BodyEnemy
+  m_Name: BodyEnemyD
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1061,8 @@ MonoBehaviour:
     m_Bits: 72
   areaDetection: {x: 100, y: 10, z: 100}
   listEnemies: []
-  timeToUpdate: 0.1
+  timeToUpdate: 0.03
+  enemigoMuerto: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

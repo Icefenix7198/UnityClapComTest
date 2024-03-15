@@ -46,11 +46,21 @@ public class BulletMovement : MonoBehaviour
             other.gameObject.GetComponent<DamageDetector>().HP -= damage;
 
             //If not piercing destoy bullet
-            if (!other.gameObject.GetComponent<BulletMovement>().piercing)
+            if (!piercing)
             {
-                Destroy(other.gameObject);
+                Destroy(gameObject);
             }
         }
+        else if (other.gameObject.CompareTag("Player") && EnemyBullet)
+            {
+                //Deal damage
+                other.gameObject.GetComponent<DamageDetector>().HP -= damage;
 
+                //If not piercing destoy bullet
+                if (!piercing)
+                {
+                    Destroy(gameObject);
+                }
+            }
     }
 }

@@ -53,6 +53,8 @@ public class GunParent : MonoBehaviour
         }
 
         currentBullets = maxMagazine;
+
+        TargetEnemy();
     }
 
     // Update is called once per frame
@@ -67,24 +69,20 @@ public class GunParent : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.J))
             {
-                enemigos = detection.GetComponent<EnemiesDetection>().listEnemies;
-                //Orientarse hacia el enememigo
-                for (int i = 0; i < enemigos.Count; i++)
-                {
-                    if (Vector3.Distance(enemigos[i].transform.position, parent.position) < distanceEnemy)
-                    {
-                        enemyToShoot = enemigos[i];
-                        distanceEnemy = Vector3.Distance(enemigos[i].transform.position, parent.position);
-                    }
-                }
+                TargetEnemy();
 
                 //Set rotacion del disparo
                 Vector3 shotDir = transform.forward;
-                if (enemigos != null)
+                if (enemyToShoot != null && enemigos != null)
                 {
                     //Direccion del enemigo
                     shotDir = enemyToShoot.transform.position - parent.position;
                     //transform.LookAt(enemyToShoot.transform);
+                }
+                if(enemyToShoot == null && enemigos != null) 
+                {
+                    distanceEnemy = float.PositiveInfinity;
+                    TargetEnemy();
                 }
 
                 if (shootingTime > cadency)
@@ -106,6 +104,23 @@ public class GunParent : MonoBehaviour
             }
         }
 
+    }
+
+    private void TargetEnemy()
+    {
+        enemigos = detection.GetComponent<EnemiesDetection>().listEnemies;
+        //Orientarse hacia el enememigo
+        for (int i = 0; i < enemigos.Count; i++)
+        {
+            if (Vector3.Distance(enemigos[i].transform.position, parent.position) < distanceEnemy)
+            {
+                enemyToShoot = enemigos[i];
+                distanceEnemy = Vector3.Distance(enemigos[i].transform.position, parent.position);
+
+                Debug.Log("El enemigo es :", enemigos[i]);
+                Debug.Log(distanceEnemy);
+            }
+        }
     }
 }
 

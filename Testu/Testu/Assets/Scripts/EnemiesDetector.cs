@@ -14,6 +14,9 @@ public class EnemiesDetection : MonoBehaviour
     float time;
     public float timeToUpdate;
 
+    //Quitar cosas de la lista
+    [SerializeField] private bool enemigoMuerto;
+
     void Start()
     {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
@@ -38,7 +41,8 @@ public class EnemiesDetection : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, areaDetection, Quaternion.identity, m_LayerMask);
         int i = 0;
         //Check when there is a new collider coming into contact with the box
-        while (i < hitColliders.Length)
+        enemigoMuerto = false;
+        while (i < hitColliders.Length && !enemigoMuerto)
         {
             //Output all of the collider names
             //Debug.Log("Hit : " + hitColliders[i].name + i);
@@ -51,8 +55,17 @@ public class EnemiesDetection : MonoBehaviour
                 for (int j = 0; j < listEnemies.Count; j++)
                 {
                     if (hitColliders[i].gameObject == listEnemies[j]) { AddToList = false; }
+
+                    //Si hay un enemigo muerto
+                    if (listEnemies[j] == null) 
+                    {
+                        Debug.Log("Enemigo Muerto");
+                        listEnemies.Remove(listEnemies[j]);
+                        enemigoMuerto = true;
+                        break;
+                    }
                 }
-                if (AddToList) { listEnemies.Add(hitColliders[i].gameObject); }
+                if (AddToList && !enemigoMuerto) { listEnemies.Add(hitColliders[i].gameObject); }
             }
 
             //Increase the number of Colliders in the array

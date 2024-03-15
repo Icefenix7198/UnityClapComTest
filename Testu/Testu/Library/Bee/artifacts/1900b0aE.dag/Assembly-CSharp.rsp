@@ -356,7 +356,6 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/DamageDetector.cs"
 "Assets/Scripts/EnemiesDetector.cs"
-"Assets/Scripts/GunController.cs"
 "Assets/Scripts/GunParent.cs"
 "Assets/Scripts/MovementPlayer.cs"
 "Assets/Scripts/WeaponInfo.cs"
