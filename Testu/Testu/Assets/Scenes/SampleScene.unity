@@ -460,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &625783058
 Transform:
   m_ObjectHideFlags: 0
@@ -1155,6 +1155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
+  cooldownDash: 3.5
+  dashing: 0
+  time: 0
 --- !u!114 &818707865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,7 +1439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1518541768
 Transform:
   m_ObjectHideFlags: 0

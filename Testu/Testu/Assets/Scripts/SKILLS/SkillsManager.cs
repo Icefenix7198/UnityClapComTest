@@ -14,7 +14,7 @@ public class SkillsManager : MonoBehaviour
 
     //Skill 2 things
     public GunParent gunParent; //Gestionar el modo enrage de el parent
-    public JugadorController jugadorController; //Gestinar el aumento de speed
+    public MovementPlayer jugadorController; //Gestinar el aumento de speed
     public DamageDetector damageDetector; //Aumentar armadura 
 
 

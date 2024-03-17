@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         //The camera velocity is equal to the players
-        followStrenght = target.GetComponent<JugadorController>().velocidad;
+        followStrenght = target.GetComponent<MovementPlayer>().velocidad;
     }
 
     // Update is called once per frame

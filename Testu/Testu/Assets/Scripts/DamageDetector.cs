@@ -23,22 +23,4 @@ public class DamageDetector : MonoBehaviour
             //Crear charco de acido
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("Hubo impacto con:", other.gameObject);
-        //If collides with player bullet
-        if (other.gameObject.CompareTag("Bullet"))
-        {
-            //Deal damage
-            float dmg = other.gameObject.GetComponent<BulletMovement>().damage;
-            HP -= dmg;
-
-            //If not piercing destoy bullet
-            if (!other.gameObject.GetComponent<BulletMovement>().piercing)
-            {
-                Destroy(other.gameObject);
-            }
-        }
-    }
 }

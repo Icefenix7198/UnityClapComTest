@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class BulletMovementAndDamage : MonoBehaviour
 {
     // Start is called before the first frame update
     public float maxDistance;
@@ -56,8 +56,13 @@ public class BulletMovement : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Player") && EnemyBullet) //Collision with player
         {
-            //Deal damage
-            other.gameObject.GetComponent<DamageDetector>().HP -= damage;
+            //Solo si no esta dashing recibir daño
+            if(!other.gameObject.GetComponent<MovementPlayer>().dashing) 
+            {
+                //Deal damage
+                other.gameObject.GetComponent<DamageDetector>().HP -= damage;
+            }
+            
 
             //If not piercing destoy bullet
             if (!piercing)

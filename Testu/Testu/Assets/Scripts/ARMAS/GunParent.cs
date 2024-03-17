@@ -94,11 +94,11 @@ public class GunParent : MonoBehaviour
                 {
                     //Create bullet and set its characteristics
                     GameObject referencia = Instantiate(projectile, parent.position, Quaternion.identity);
-                    referencia.GetComponent<BulletMovement>().maxDistance = distanceBullet;
-                    referencia.GetComponent<BulletMovement>().speed = speedBullet;
-                    referencia.GetComponent<BulletMovement>().damage = damage;
-                    referencia.GetComponent<BulletMovement>().direction = shotDir;
-                    referencia.GetComponent<BulletMovement>().piercing = piercing;
+                    referencia.GetComponent<BulletMovementAndDamage>().maxDistance = distanceBullet;
+                    referencia.GetComponent<BulletMovementAndDamage>().speed = speedBullet;
+                    referencia.GetComponent<BulletMovementAndDamage>().damage = damage;
+                    referencia.GetComponent<BulletMovementAndDamage>().direction = shotDir;
+                    referencia.GetComponent<BulletMovementAndDamage>().piercing = piercing;
 
                     //Deploy bullets
                     currentBullets -= 1; //Lo pongo por si hay en un futuro gasto de multiples balas como en la escopeta, sino simplemente poner la otra formula que sera mas eficiente
