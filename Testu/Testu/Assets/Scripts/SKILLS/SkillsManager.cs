@@ -11,22 +11,26 @@ public class SkillsManager : MonoBehaviour
     //Projectile
     public GameObject acidSpit;
     [SerializeField] private float cooldownSkill1;
-    float timeS1;
+    [SerializeField] private float timeS1;
 
 
     //Skill 2 things
-    public GunParent gunParent; //Gestionar el modo enrage de el parent
-    public MovementPlayer jugadorController; //Gestinar el aumento de speed
-    public DamageDetector damageDetector; //Aumentar armadura
+    [SerializeField] private bool activeSkill2 = false; 
+    float cadencia;
+    float reload;
+    float speed;
+    float cooldownDash;
+    float armor; //TO DO
     [SerializeField] private float cooldownSkill2;
-    float timeS2;
+    [SerializeField] private float durationSkill2;
+    [SerializeField] private float timeS2;
 
 
     //Skill 3 things
     public GameObject swipe;
     public Transform swipeOrigin;
     [SerializeField] private float cooldownSkill3;
-    float timeS3;
+    [SerializeField] private float timeS3;
 
 
     // Start is called before the first frame update
@@ -62,6 +66,21 @@ public class SkillsManager : MonoBehaviour
             }
             
         }
+        if(activeSkill2)
+        {
+            if (timeS2 > durationSkill2)
+            {
+                activeSkill2 = false;
+                timeS2 = 0.0f;
+
+                gameObject.GetComponent<GunParent>().cadency = cadencia;
+                gameObject.GetComponent<GunParent>().reloadTime = reload;
+                gameObject.GetComponent<MovementPlayer>().velocidad = speed;
+                gameObject.GetComponent<MovementPlayer>().cooldownDash = cooldownDash;
+                //armadura
+
+            }
+        }
         //Skill 3
         if (Input.GetKey(KeyCode.Alpha3))
         {
@@ -81,7 +100,21 @@ public class SkillsManager : MonoBehaviour
 
     void Skill2()
     {
+        //Guardar antiguos atributos
+        cadencia = gameObject.GetComponent<GunParent>().cadency;
+        reload = gameObject.GetComponent<GunParent>().reloadTime;
+        speed = gameObject.GetComponent<MovementPlayer>().velocidad;
+        cooldownDash = gameObject.GetComponent<MovementPlayer>().cooldownDash;
+        //armadura
 
+        //Cambiar stats
+        gameObject.GetComponent<GunParent>().cadency = cadencia *0.7f;
+        gameObject.GetComponent<GunParent>().reloadTime = reload * 0.5f;
+        gameObject.GetComponent<MovementPlayer>().velocidad = speed * 1.5f;
+        gameObject.GetComponent<MovementPlayer>().cooldownDash = cooldownDash * 0.5f;
+
+        //Activar la skill durante sus 6 segundos
+        activeSkill2 = true;
     }
 
     void Skill3()
