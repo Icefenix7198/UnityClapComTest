@@ -14,6 +14,8 @@ public class SpitSkill1 : MonoBehaviour
     public Vector3 direction;
     [SerializeField] private Vector3 firstPosition;
     public GameObject acidPuddle;
+
+    //Stats acido
     void Start()
     {
         //Debug.Log(transform.rotation);
@@ -62,6 +64,7 @@ public class SpitSkill1 : MonoBehaviour
     void KillBullet() 
     {
         //Crear charco de acido.
+        Instantiate(acidPuddle, transform.position, Quaternion.identity);
         
         Destroy(gameObject);
     }

@@ -104,7 +104,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.29
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-6788090214978157867
 MonoBehaviour:
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd3ef49d1e1cd74abdc6b59f180fbea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 20
-  speed: 9
+  maxDistance: 30
+  speed: 15
   damage: 90
   piercing: 0
   direction: {x: 0, y: 0, z: 0}
   firstPosition: {x: 0, y: 0, z: 0}
-  acidPuddle: {fileID: 0}
+  acidPuddle: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}

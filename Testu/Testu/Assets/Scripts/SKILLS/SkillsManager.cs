@@ -48,6 +48,8 @@ public class SkillsManager : MonoBehaviour
         timeS2 += Time.deltaTime;
         timeS3 += Time.deltaTime;
 
+        TargetEnemy();
+
         //Skill 1
         if (Input.GetKey(KeyCode.Alpha1))
         {
@@ -101,6 +103,7 @@ public class SkillsManager : MonoBehaviour
 
         Vector3 shotDir = transform.forward;
         GameObject referencia = Instantiate(acidSpit, gameObject.transform.position, Quaternion.identity);
+        if (enemy) { shotDir = enemy.transform.position - transform.position; }
         referencia.GetComponent<SpitSkill1>().direction = shotDir;
     }
 
