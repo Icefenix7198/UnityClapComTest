@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce54655568d092428943f9b4754b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualWeapon: {fileID: 3100871468915037337, guid: 64417ee40e04a3c4385432a10ed2d099, type: 3}
+  actualWeapon: {fileID: 3100871468915037337, guid: ec9ae14857a201b4c863b1fefae641ee, type: 3}
   damage: 1.6
   cadency: 0.5
   distanceBullet: 80

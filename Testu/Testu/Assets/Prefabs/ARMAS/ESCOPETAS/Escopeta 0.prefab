@@ -50,7 +50,7 @@ MonoBehaviour:
   speedBullet: 2
   piercing: 1
   maxMagazine: 8
-  reloadTime: 1.7
+  reloadTime: 2.7
   damageScalation: 0
   tipoDisparo: 0
   projectile: {fileID: 6177921692372879315, guid: 7cb61a4e317865f43a5568520fccf1d3, type: 3}
