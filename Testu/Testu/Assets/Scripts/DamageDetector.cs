@@ -5,6 +5,9 @@ using UnityEngine;
 public class DamageDetector : MonoBehaviour
 {
     public float HP;
+    public float armor;
+
+    public GameObject acidoMuerte;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +21,17 @@ public class DamageDetector : MonoBehaviour
         //If 0 life, die
         if (HP <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
 
             //Crear charco de acido
+            GameObject referencia = Instantiate(acidoMuerte, this.transform);
+
+            if (gameObject.CompareTag("Enemy")) 
+            {
+                referencia.GetComponent<AcidPuddle>().damage = 10;
+                referencia.GetComponent<AcidPuddle>().enemy = true;
+
+            }
         }
     }
 }

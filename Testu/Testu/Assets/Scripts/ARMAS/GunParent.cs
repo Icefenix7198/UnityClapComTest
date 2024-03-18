@@ -127,8 +127,7 @@ public class GunParent : MonoBehaviour
                 enemyToShoot = enemigos[i];
                 distanceEnemy = Vector3.Distance(enemigos[i].transform.position, parent.position);
 
-                Debug.Log("El enemigo es :", enemigos[i]);
-                Debug.Log(distanceEnemy);
+                //Debug.Log(distanceEnemy);
             }
         }
     }

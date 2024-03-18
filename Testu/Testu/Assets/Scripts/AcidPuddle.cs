@@ -5,7 +5,7 @@ using UnityEngine;
 public class AcidPuddle : MonoBehaviour
 {
 
-    [SerializeField] private bool enemy;
+    public bool enemy;
     public float damage;
     int currentTicks = 0; //Guardamos los ticks actuales para esperar
     public float tickDamage;

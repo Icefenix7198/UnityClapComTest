@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 300
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &511298866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -525,6 +527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3000000
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &553441732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -936,6 +940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 140
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &754525497
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1149,6 +1155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 300
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &809189713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1363,6 +1371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 1000
+  armor: 0
+  acidoMuerte: {fileID: 0}
 --- !u!114 &818707867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,6 +1448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 140
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &862746746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1760,6 +1772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3000000
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &1222753823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2217,6 +2231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 140
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &1616035201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2366,6 +2382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3000000
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &1618526440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2759,6 +2777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 300
+  armor: 0
+  acidoMuerte: {fileID: 2524828525934973899, guid: 6386b0a188c7c5143b31a207d0bb6f79, type: 3}
 --- !u!54 &2009759319
 Rigidbody:
   m_ObjectHideFlags: 0
