@@ -72,7 +72,7 @@ public class GunParent : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.J))
+            if (Input.GetKey(KeyCode.J) && !gameObject.GetComponent<MovementPlayer>().dashing)
             {
                 TargetEnemy();
 

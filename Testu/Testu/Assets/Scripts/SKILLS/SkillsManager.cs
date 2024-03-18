@@ -6,10 +6,12 @@ public class SkillsManager : MonoBehaviour
 {
     //Skill 1 things
     //Targets
+    public EnemiesDetection detection;
     public List<GameObject> enemies; //Al igual que el shoot lista de todos los enemigos detectados.
     public GameObject enemy;
     //Projectile
     public GameObject acidSpit;
+    float distanceEnemy = float.PositiveInfinity;
     [SerializeField] private float cooldownSkill1;
     [SerializeField] private float timeS1;
 
@@ -95,7 +97,27 @@ public class SkillsManager : MonoBehaviour
 
     void Skill1() 
     {
-    
+        TargetEnemy();
+
+        Vector3 shotDir = transform.forward;
+        GameObject referencia = Instantiate(acidSpit, gameObject.transform.position, Quaternion.identity);
+        referencia.GetComponent<SpitSkill1>().direction = shotDir;
+    }
+
+    private void TargetEnemy()
+    {
+        enemies = detection.GetComponent<EnemiesDetection>().listEnemies;
+        //Orientarse hacia el enememigo
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            if (Vector3.Distance(enemies[i].transform.position, gameObject.transform.position) < distanceEnemy)
+            {
+                enemy = enemies[i];
+                distanceEnemy = Vector3.Distance(enemies[i].transform.position, gameObject.transform.position);
+
+                Debug.Log(distanceEnemy);
+            }
+        }
     }
 
     void Skill2()
